@@ -4,7 +4,7 @@
   "description": "Vue，exercise, explore, byMyself",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config webpack.config.js",
+    "dev": "webpack-dev-server --open",
     "build": "webpack"
   },
   "repository": {
@@ -19,11 +19,14 @@
   },
   "homepage": "https://github.com/zhaoYun-Long/Vue-explore#readme",
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "vue": "^2.5.16"
   }
 }
