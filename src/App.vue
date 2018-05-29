@@ -5,9 +5,10 @@
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+export default new Vue({
+  name: 'App',
+  el: '#app'
+})
 </script>
 
 
