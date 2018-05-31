@@ -10,7 +10,8 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'vue-explore'
+			title: 'vue-explore',
+			template: './index.html'
 		}),
 		new CleanWebpackPlugin(['dist']),
 		new VueLoaderPlugin(),

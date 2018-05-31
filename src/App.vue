@@ -1,10 +1,14 @@
 <template>
-    <h1>demo</h1>
+    <h1>{{message}}</h1>
 </template>
 
 <script>
 export default {
-
+  data () {
+    return {
+      message: 'demo'
+    }
+  }
 }
 </script>
 
