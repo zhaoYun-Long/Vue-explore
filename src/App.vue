@@ -1,8 +1,17 @@
 <template>
-    <h1>{{message}}</h1>
+	<div>
+		<div>
+    	<router-link to="/testSlot">slot</router-link>
+    	<router-link to="/testVueX">vuex</router-link>
+    </div>
+    <div>
+    	<router-view></router-view>
+    </div>
+	</div>
 </template>
 
 <script>
+
 export default {
   data () {
     return {
@@ -14,5 +23,11 @@ export default {
 
 
 <style>
-
+div a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+}
 </style>

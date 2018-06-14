@@ -13,6 +13,11 @@ module.exports = {
 			title: 'vue-explore',
 			template: './index.html'
 		}),
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jquery: 'jquery',
+			'window.jQuery': 'jquery'
+		}),
 		new CleanWebpackPlugin(['dist']),
 		new VueLoaderPlugin(),
 		new webpack.NamedModulesPlugin(),
@@ -48,7 +53,18 @@ module.exports = {
 	          presets: ['@babel/preset-env']
 	        }
 	      }
-	    }
+	    },
+	    {
+        test:/\.(woff|svg|eot|ttf)\??.*$/,
+         use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      }
 		]
 	}
 }
