@@ -13,10 +13,12 @@
 				{{ slotProps.todo.text}}
 			</template>
 		</Todo> -->
+		<input type="button" @keyup.enter="onEnter" value="here">
 	</div>
 </template>
 
 <script>
+
 import Todo from './Todo.vue'
 export default {
 	components: {
@@ -25,6 +27,11 @@ export default {
 	data () {
 		return {
 
+		}
+	},
+	methods: {
+		onEnter () {
+			console.log('enter')
 		}
 	}
 }
