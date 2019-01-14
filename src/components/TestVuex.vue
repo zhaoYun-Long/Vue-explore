@@ -1,15 +1,20 @@
 <template>
-	<div class="abc">{{doneTodosCount}}__{{a}}__{{b}}</div>
+ 	<div>
+		 <Products>}</Products>
+		 <Cart></Cart>
+	</div>
 </template>
 
 <script>
 
-import { mapState } from 'vuex'
-import { mapGetters } from 'vuex'
-import { mapMutations } from 'vuex'
-import { mapActions } from 'vuex'
+import Products from './Products.vue'
+import Cart from './Cart.vue'
 
 export default {
+	components: {
+		Products,
+		Cart
+	},
 	data () {
 		return {
 			b: {
@@ -18,34 +23,8 @@ export default {
 		}
 	},
 	computed: {
-		a: function() {
-			
-			return this.$store.state.count
-		},
-		// ...mapState({
-		// 		count: state => state.count + 1,
-		// 		countAlias: 'counte',
-		// 	}),
-		...mapGetters([
-				'doneTodosCount'
-				]
-			),
-		...mapMutations({
-			add: 'increment'
-		}),
-		...mapActions([
-			'increment',
-			'incrementBy'
-		]),
-		...mapActions({
-			add: 'increment'
-		})
 	},
 	mounted () {
-		// this.$set(this.b, 'age', 12)
-		// console.log({a:1, c:2, ...(this.b)})
-		let o = 'ccc'
-		console.log({[o]: 666})
 	},
 	methods: {
 	}

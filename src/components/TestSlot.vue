@@ -1,42 +1,29 @@
 <template>
-	<div>
-		<Button>Default</Button>
-    <Button type="primary">Primary</Button>
-    <Button type="ghost">Ghost</Button>
-    <Button type="dashed">Dashed</Button>
-    <Button type="text">Text</Button>
-    <br><br>
-    <Button type="info">Info</Button>
-<!-- 		<Todo :todos='todos'>
-			<template slot-scope="slotProps">
-				<span v-if="slotProps.todo.isComplete">对号</span>
-				{{ slotProps.todo.text}}
-			</template>
-		</Todo> -->
-		<input type="button" @keyup.enter="onEnter" value="here">
-	</div>
+<div id="box">
+  <div class="block">
+    <span class="demonstration">默认</span>
+    <el-slider v-model="value1"></el-slider>
+  </div>
+</div>
+
 </template>
-
 <script>
+import axios from "axios";
 
-import Todo from './Todo.vue'
 export default {
-	components: {
-		Todo
-	},
-	data () {
-		return {
-
-		}
-	},
-	methods: {
-		onEnter () {
-			console.log('enter')
-		}
-	}
-}
+  data() {
+    return {
+      
+    }
+  },
+  mounted() {
+  },
+  computed: {
+  },
+  methods: {
+  }
+};
 </script>
-
-<style>
+<style scoped>
 
 </style>

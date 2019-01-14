@@ -3,6 +3,7 @@
 		<div>
     	<router-link to="/testSlot">slot</router-link>
     	<router-link to="/testVueX">vuex</router-link>
+			<router-link to="/testLayui">layui_datepicker</router-link>
     </div>
     <div>
     	<router-view></router-view>
@@ -17,7 +18,10 @@ export default {
     return {
       message: 'demo'
     }
-  }
+	},
+	mounted() {
+		console.log('app初始化')
+	}
 }
 </script>
 
@@ -29,5 +33,8 @@ div a {
 	padding: 5px;
 	border: 1px solid #ccc;
 	background-color: #eee;
+}
+#box .el-slider__runway {
+  background-color: red !important;
 }
 </style>
