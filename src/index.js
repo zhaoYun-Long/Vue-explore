@@ -21,20 +21,31 @@ Vue.use(VueRouter)
 
 import store from './store/index.js'
 
+import './components/setElementStyle.css'
+
 import TestSlot from './components/TestSlot.vue'
 import TestVuex from './components/TestVuex.vue'
 import TextLayui from './components/TestLayui.vue'
+import TestRouter from './components/testRouter.vue'
+import ch1 from './components/ch1.vue'
+// console.log(Foo)
 
 const router = new VueRouter({
     routes: [
         { path: '/testSlot', component: TestSlot },
         { path: '/testVuex', component: TestVuex },
-        { path: '/testLayui', component: TextLayui}
+        { path: '/testLayui', component: TextLayui},
+        { path: '/testRouter/:param', component: TestRouter, children: [
+            { path: 'ch', component:  ch1 }
+        ]}
     ]
 })
 new Vue({
     el: '#app',
     store,
+    data: {
+        testData: {}
+    },
     components: {
         App
     },

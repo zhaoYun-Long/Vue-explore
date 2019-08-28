@@ -1,9 +1,6 @@
 <template>
 <div id="box">
-  <div class="block">
-    <span class="demonstration">默认</span>
-    <el-slider v-model="value1"></el-slider>
-  </div>
+  <h1>{{msg}}</h1>
 </div>
 
 </template>
@@ -13,10 +10,17 @@ import axios from "axios";
 export default {
   data() {
     return {
-      
+      msg: 'lalala'
     }
   },
+  created() {
+    console.log('created')
+  },
   mounted() {
+    console.log('monted')
+    setTimeout( () => {
+      this.msg = '000000000'
+    }, 2000)
   },
   computed: {
   },

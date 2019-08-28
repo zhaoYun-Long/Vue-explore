@@ -41,7 +41,7 @@
     "babel-loader": "^8.0.0-beta.0",
     "babel-runtime": "^6.26.0",
     "echarts": "^4.2.0-rc.1",
-    "element-ui": "^2.4.9",
+    "element-ui": "^2.11.1",
     "html2canvas": "^1.0.0-alpha.12",
     "iview": "^2.14.2",
     "jquery": "^3.3.1",

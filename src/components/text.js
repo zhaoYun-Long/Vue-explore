@@ -1,1 +1,4 @@
-console.log('text.js')
+export let obj = {
+  a: 'aaaaaaaa'
+}
+

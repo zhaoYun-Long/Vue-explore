@@ -1,0 +1,8 @@
+.treeBox .el-tree-node__content {
+  height: 56px;
+}
+.treeBox .el-tree-node__expand-icon {
+  position: absolute;
+  z-index: 99;
+  right: 0px;
+}

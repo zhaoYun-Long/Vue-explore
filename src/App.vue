@@ -1,12 +1,14 @@
 <template>
 	<div>
 		<div>
-    	<router-link to="/testSlot">slot</router-link>
+    	<router-link to="/testSlot" tag="li"><a> slot</a></router-link>
     	<router-link to="/testVueX">vuex</router-link>
 			<router-link to="/testLayui">layui_datepicker</router-link>
     </div>
     <div>
-    	<router-view></router-view>
+			<keep-alive>
+    		<router-view></router-view>
+			</keep-alive>
     </div>
 	</div>
 </template>
